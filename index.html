@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/331a42d0f2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-home">
+        <h1 class="title">Tic Tac Toe</h1>
+        <button id="start-game">Start Game</button>
+    </div>
+    <section id="popup-form" class="dark-bg disappear">
+        <form id="form" action="script.js" >
+
+            <p class="form-title">Enter Name</p>
+            <div class="player-form-ctn">
+                <div class="player1-form-ctn">
+                    <img src="assets/avatar1.png" class="avatar-img">
+                    <input type="text" class="input-form" name="player1">
+                </div>
+                <div class="player1-form-ctn">
+                    <img src="assets/avatar2.jpg" class="avatar-img">
+                    <input type="text" class="input-form" name="player2">
+                </div>
+            </div>
+            <button form="form" type="submit" id="submit">Start Game</button>
+        </form>
+    </section>
+
+    <div class="container-game disappear">
+
+            <div class="announcement-bar">
+                <div class="announcement-box">
+                    <p class="announcement-text"></p>
+                </div>
+            </div>
+            <div class="top-right"><i class="fa-solid fa-rotate-left reset"></i></div>
+
+            <div class="player1-ctn player-ctn">
+                <div class="player-img-ctn">
+                    <img src="assets/ratio.png" class="player-img">
+                </div>
+                <p class="player1-name">Player 1</p>
+                <div class="score">
+                    <div class="player1_pts player1-score">0 pts</div>
+                </div>
+            </div>
+            <div class="gameboard-ctn">
+                <div class="gameboard">
+                    <div data-index="0" class="field outer"></div>
+                    <div data-index="1" class="field vertical"></div>
+                    <div data-index="2" class="field outer"></div>
+                    <div data-index="3" class="field horizontal"></div>
+                    <div data-index="4" class="field vertical horizontal"></div>
+                    <div data-index="5" class="field horizontal"></div>
+                    <div data-index="6" class="field outer"></div>
+                    <div data-index="7" class="field vertical"></div>
+                    <div data-index="8" class="field outer"></div>
+                </div>
+                <div class="button-div">
+                    <button id="next_game" class="disappear">Next Game</button>
+                </div>
+            </div>
+            <div class="player2-ctn player-ctn">
+                <div class="player-img-ctn">
+                    <img src="assets/aven.png" class="player-img">
+                </div>
+                <p class="player2-name">Player 2</p>
+                <div class="score">
+                    <div class="player2_pts player2-score">0 pts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-result dark-bg disappear">
+        <div class="result-popup">
+            <p class="player-win">Player 1 Won</p>
+            <div class="winner-img-ctn"></div>
+            <div class="player-points">
+                <div class="player-pts-div">
+                    <div class="player-pts-name player1-name"></div>
+                    <div class="player-pts player1_pts">4 pts</div>
+                </div>
+                <div class="player-pts-div">
+                    <div class="player-pts-name player2-name"></div>
+                    <div class="player-pts player2_pts">4 pts</div>
+                </div>
+            </div>
+            <button id="next-game">New Game</button>
+        </div>
+    </div>
+    <div class="container-reminder dark-bg disappear">
+        <div class="reminder-popup">
+            <p class="reminder-text"></p>
+            <button id="continue">Understood</button>
+        </div>
+    </div>
+</body>
+</html>
